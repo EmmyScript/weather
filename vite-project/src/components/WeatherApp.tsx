@@ -28,6 +28,7 @@ const WeatherApp = () => {
       const response = await result.json();
       setWedaData(response);
         setIsLoading(false)
+      
       if (
         response.weather[0].icon === "01d" ||
         response.weather[0].icon === "01n"
@@ -92,7 +93,7 @@ const WeatherApp = () => {
           type="text"
           className="cityInput"
           placeholder="search..."
-          onChange={(e) => setCityInput(e.target.value)}
+          onChange={(e) => setCityInput(e.target.value) }
         />
         <div
           className="search-icons"
@@ -129,6 +130,10 @@ const WeatherApp = () => {
             <div className="text">Wind Speed</div>
           </div>
         </div>
+        
+      </div>
+      <div className="scroll-container">
+        <div className="scroll-text">Always checked your weather regulary!</div>
       </div>
     </div>
     <div className="empty-div"></div>
