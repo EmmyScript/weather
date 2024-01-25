@@ -14,10 +14,12 @@ const WeatherApp = () => {
   const [cityInput, setCityInput] = useState("");
   const [wedaData, setWedaData] = useState<any>();
   const [wicon, setWicon] = useState(cloud);
+  const[isLoading, setIsLoading] =useState(false)
 //   console.log(process?.env.REACT_APP_WEDA_KEY as string)
 
   let idoko_weda = "3e1fa36c24f7361930f262555830dbc0";
   const search = async () => {
+    setIsLoading(true)
     if (!cityInput) return;
     try {
 
@@ -25,7 +27,7 @@ const WeatherApp = () => {
       const result = await fetch(url);
       const response = await result.json();
       setWedaData(response);
-
+        setIsLoading(false)
       if (
         response.weather[0].icon === "01d" ||
         response.weather[0].icon === "01n"
@@ -73,6 +75,7 @@ const WeatherApp = () => {
       console.log(response);
     } catch (err: any) {
       console.log(err);
+      setIsLoading(false)
     }
   };
 
@@ -83,10 +86,12 @@ const WeatherApp = () => {
         
         <div className="header"><span><FaGlobe/></span>Global Weather APP</div>
       <div className="top-bar">
+        {isLoading && <div className="spinner-border loading" >loading...</div>}
+        
         <input
           type="text"
           className="cityInput"
-          placeholder="search city"
+          placeholder="search..."
           onChange={(e) => setCityInput(e.target.value)}
         />
         <div
@@ -120,13 +125,13 @@ const WeatherApp = () => {
         <div className="element">
           <img src={wind} className="icon" alt="..." />
           <div className="data">
-            <div className="humidity-percent">{wedaData?.wind?.deg}km/hr</div>
+            <div className="humidity-percent">{wedaData?.wind?.deg}km/h</div>
             <div className="text">Wind Speed</div>
           </div>
         </div>
       </div>
     </div>
-    <div className="empty-div">ido's</div>
+    <div className="empty-div"></div>
     </div>
   );
 };
