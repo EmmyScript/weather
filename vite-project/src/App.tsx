@@ -1,3 +1,5 @@
+
+import Form from "./components/Form"
 import WeatherApp from "./components/WeatherApp"
 
 
@@ -6,6 +8,7 @@ const App = () => {
     <div className="app">
 
       <WeatherApp/>
+      
     </div>
   )
 }

@@ -86,7 +86,7 @@ const WeatherApp = () => {
   console.log(cityInput)
 
   return (
-    <div className="row">
+    <div className="row mb-5">
         <div className="empty-div"></div>
     <div className="container">
         
@@ -142,6 +142,7 @@ const WeatherApp = () => {
       </div>
       <div className="scroll-container">
         <div className="scroll-text">Always checked your weather regulary!</div>
+        
       </div>
     </div>
     <div className="empty-div"></div>
