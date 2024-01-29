@@ -1,5 +1,5 @@
 
-import Form from "./components/Form"
+
 import WeatherApp from "./components/WeatherApp"
 
 
@@ -13,4 +13,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;

@@ -233,7 +233,7 @@ margin: 10px;
 /*scrolling text */
 
 .scroll-container {
-    color: rgb(183, 255, 0);
+    
     width: 100%;
     font-size: large;
     overflow: hidden;

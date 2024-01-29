@@ -8,6 +8,8 @@ import search1 from "../assets/image/search.png";
 import snow from "../assets/image/snow.png";
 import wind from "../assets/image/wind.png";
 import { useState } from "react";
+import emmy from "../assets/image/rejoi.jpg"
+
 // import {BsGlobeAmericas}  from "react-icons/bs";
 
 const WeatherApp = () => {
@@ -141,7 +143,9 @@ const WeatherApp = () => {
         
       </div>
       <div className="scroll-container">
-        <div className="scroll-text">Always checked your weather regulary!</div>
+        <div className="scroll-text">@emmyTechy
+        <img src={emmy} alt="..." width={20} height={20} className="rounded-circle" style={{objectFit:"cover",fontSize:"bolder"}}/>
+        </div>
         
       </div>
     </div>
