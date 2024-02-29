@@ -92,7 +92,7 @@ const WeatherApp = () => {
         <div className="empty-div"></div>
     <div className="container">
         
-        <div className="header">Global Weather APP</div>
+        <div className="header">Global Weather & Hungry APP</div>
       <div className="top-bar">
         {isLoading && <div className="spinner-border loading" >loading....</div>}
         
@@ -129,7 +129,7 @@ const WeatherApp = () => {
           <img src={humidity} className="icon" alt="..." />
           <div className="data">
             <div className="humidity-percent">{wedaData?.main?.humidity}%</div>
-            <div className="text">Humidity</div>
+            <div className="text">Humidity of Hungry</div>
           </div>
         </div>
 
@@ -137,7 +137,7 @@ const WeatherApp = () => {
           <img src={wind} className="icon" alt="..." />
           <div className="data">
             <div className="humidity-percent">{wedaData?.wind?.deg}km/h</div>
-            <div className="text">Wind Speed</div>
+            <div className="text">Wind Speed/Hardship</div>
           </div>
         </div>
         
