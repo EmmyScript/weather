@@ -152,6 +152,7 @@ const WeatherApp = () => {
     <div className="empty-div"></div>
     </div>
   );
+  
 };
 
 export default WeatherApp;
